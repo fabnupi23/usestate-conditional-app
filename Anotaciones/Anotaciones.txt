@@ -1,0 +1,20 @@
+*Al dar click en el boton realizamos un cambio en el cual pasa de verdadero a false y se muestra un mensaje, esto usando el hook useState
+    Ejemplo:
+            const [condition, setCondition] = useState(true);
+            return (
+                <div>
+                    <button onClick={() => setCondition(!condition)}>
+                        Random
+                    </button>
+                    {
+                        condition
+                        ? <h1>Mostrar mensaje en verdadero</h1>
+                        : <h1>Otro mensaje en falso</h1>
+                    }
+
+
+
+
+*También se va a imprimir el valor de un booleano (en react) va a quedar debajo del mensaje, se crea una sentencia javaScript y se llama 
+ en este caso a conditional y no va a mostrar los valores booleanos hasta no hacer la conversión y esto se hace con toString
+    Ejemplo: <h1>Valor del estado es {condition.toString()}</h1>

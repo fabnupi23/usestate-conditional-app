@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function ConditionalApp() {
+    const [condition, setCondition] = useState(true);
   return (
     <div>
-        <h1>
-            ConditionalApp
-        </h1>
+        <button onClick={() => setCondition(!condition)}>
+            Random
+        </button>
+        {
+            condition
+            ? <h1>Mostrar mensaje en verdadero</h1>
+            : <h1>Otro mensaje en falso</h1>
+        }
+
+        <h1>Valor del estado es {condition.toString()}</h1>
+
     </div>
   )
 }
